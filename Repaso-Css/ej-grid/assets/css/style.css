@@ -1,0 +1,100 @@
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos de las áreas del grid */
+.header {
+    grid-area: header;
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #2196F3;
+    padding: 20px;
+    color: white;
+}
+
+.main {
+    grid-area: main;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #FFC107;
+    padding: 20px;
+    color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Grid gap */
+/* Agrega un espacio de 10px entre las filas y columnas del grid */
+body {
+    gap: 10px;
+}
+
+/* Ejemplo de grid-auto-rows y grid-auto-columns */
+/* Establece tamaños automáticos para las filas y columnas adicionales */
+body {
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(100px, auto);
+}
+
+/* Ejemplo de justify-content */
+/* Centra el contenido del grid horizontalmente */
+body {
+    justify-content: center;
+}
+
+/* Ejemplo de align-content */
+/* Centra el contenido del grid verticalmente */
+body {
+    align-content: center;
+}
+
+/* Ejemplo de justify-items */
+/* Centra los elementos de cada celda horizontalmente */
+body {
+    justify-items: center;
+}
+
+/* Ejemplo de align-items */
+/* Centra los elementos de cada celda verticalmente */
+body {
+    align-items: center;
+}
+
+/* Ejemplo de grid-template-areas con media query */
+@media (max-width: 600px) {
+    body {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
