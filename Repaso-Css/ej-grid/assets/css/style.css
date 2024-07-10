@@ -1,100 +1,80 @@
+/* Reset básico para eliminar márgenes y paddings predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos del body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Contenedor principal utilizando Grid Layout */
 body {
     display: grid;
     grid-template-areas: 
         "header header header"
         "nav main aside"
         "footer footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 200px 1fr 200px;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    grid-template-columns: 1fr 3fr 1fr; /* Tres columnas con diferentes proporciones */
+    grid-template-rows: auto 1fr auto;  /* Alturas automáticas para header y footer, y flexible para main */
+    min-height: 100vh; /* Para asegurar que la página ocupe al menos el alto de la ventana */
 }
 
-/* Estilos de las áreas del grid */
-.header {
+/* Estilos para el header */
+header {
     grid-area: header;
-    background-color: #4CAF50;
-    padding: 20px;
-    text-align: center;
+    background: #333;
     color: white;
+    padding: 1rem;
+    text-align: center;
 }
 
-.nav {
+/* Estilos para la navegación */
+nav {
     grid-area: nav;
-    background-color: #2196F3;
-    padding: 20px;
-    color: white;
+    background: #f4f4f4;
+    padding: 1rem;
 }
 
-.main {
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 0.5rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos para el main */
+main {
     grid-area: main;
-    background-color: #f9f9f9;
-    padding: 20px;
+    padding: 1rem;
 }
 
-.aside {
+article {
+    background: #e2e2e2;
+    padding: 1rem;
+}
+
+/* Estilos para el aside */
+aside {
     grid-area: aside;
-    background-color: #FFC107;
-    padding: 20px;
-    color: white;
+    background: #f4f4f4;
+    padding: 1rem;
 }
 
-.footer {
+/* Estilos para el footer */
+footer {
     grid-area: footer;
-    background-color: #4CAF50;
-    padding: 20px;
-    text-align: center;
+    background: #333;
     color: white;
-}
-
-/* Grid gap */
-/* Agrega un espacio de 10px entre las filas y columnas del grid */
-body {
-    gap: 10px;
-}
-
-/* Ejemplo de grid-auto-rows y grid-auto-columns */
-/* Establece tamaños automáticos para las filas y columnas adicionales */
-body {
-    grid-auto-rows: minmax(100px, auto);
-    grid-auto-columns: minmax(100px, auto);
-}
-
-/* Ejemplo de justify-content */
-/* Centra el contenido del grid horizontalmente */
-body {
-    justify-content: center;
-}
-
-/* Ejemplo de align-content */
-/* Centra el contenido del grid verticalmente */
-body {
-    align-content: center;
-}
-
-/* Ejemplo de justify-items */
-/* Centra los elementos de cada celda horizontalmente */
-body {
-    justify-items: center;
-}
-
-/* Ejemplo de align-items */
-/* Centra los elementos de cada celda verticalmente */
-body {
-    align-items: center;
-}
-
-/* Ejemplo de grid-template-areas con media query */
-@media (max-width: 600px) {
-    body {
-        grid-template-areas: 
-            "header"
-            "nav"
-            "main"
-            "aside"
-            "footer";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
+    text-align: center;
+    padding: 1rem;
 }
