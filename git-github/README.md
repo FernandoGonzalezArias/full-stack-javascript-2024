@@ -136,24 +136,6 @@ Este repositorio contiene una colección de comandos de consola útiles para el 
 - **`free -h`**  
   Muestra la memoria libre y usada en el sistema.
 
-### Uso:
-
-1. Clona el repositorio:
-    ```bash
-    git clone <url-del-repositorio>
-    ```
-
-2. Navega al directorio del repositorio:
-    ```bash
-    cd <nombre-del-repositorio>
-    ```
-
-3. Usa los comandos según sea necesario.
-
-### Contribuciones
-
-Si tienes sugerencias o mejoras para los comandos listados aquí, siéntete libre de hacer un pull request.
-
 
 
 
