@@ -25,69 +25,124 @@
      git clone URL_DEL_REPOSITORIO
      ```
 
+# Comandos de Consola
 
-# Guía Rápida de Git
+Este repositorio contiene una colección de comandos de consola útiles para el desarrollo y administración de proyectos. A continuación, se presentan los comandos más comunes y sus descripciones.
 
-## Configuración Inicial
+## Comandos de Git
 
-Antes de comenzar a trabajar con Git, es fundamental configurar tu nombre de usuario y correo electrónico para que tus commits estén correctamente asociados contigo. Utiliza los siguientes comandos para configurar estos detalles:
+### Configuración
+- **`git config --global user.name "Tu Nombre"`**  
+  Configura tu nombre de usuario para Git en tu máquina local.
 
-- Configura tu nombre de usuario con:
--  `git config --global user.name "Tu Nombre"`.
+- **`git config --global user.email "tuemail@ejemplo.com"`**  
+  Configura tu dirección de correo electrónico para Git en tu máquina local.
 
-- Configura tu correo electrónico con:
--  `git config --global user.email "tuemail@example.com"`.
+### Creación y Clonación de Repositorios
+- **`git init`**  
+  Inicializa un nuevo repositorio Git en el directorio actual.
 
-## Flujo de Trabajo Básico
+- **`git clone <url-del-repositorio>`**  
+  Clona un repositorio remoto a tu máquina local.
 
-Una vez que Git está configurado, puedes gestionar tus repositorios siguiendo estos pasos básicos:
+### Estado y Modificaciones
+- **`git status`**  
+  Muestra el estado de los archivos en el directorio de trabajo y el área de preparación.
 
-1. **Inicializar un repositorio**:`git init`
-   - Si estás comenzando un nuevo proyecto, inicializa un nuevo repositorio en tu directorio de trabajo con git init. Este comando crea un nuevo repositorio de Git en el directorio actual.
+- **`git diff`**  
+  Muestra las diferencias entre los archivos modificados y los archivos confirmados en el repositorio.
 
-3. **Clonar un repositorio**:  `git clone URL_DEL_REPOSITORIO`
-   - Para trabajar en un proyecto existente, clona un repositorio desde una URL usando git clone URL_DEL_REPOSITORIO. Esto descargará una copia del repositorio existente.
+### Añadir y Confirmar Cambios
+- **`git add <archivo>`**  
+  Añade un archivo al área de preparación para el próximo commit.
 
-5. **Verificar el estado del repositorio**: `git status`
-   - Revisa qué cambios has realizado y qué archivos están listos para ser confirmados con git status.
+- **`git commit -m "Mensaje del commit"`**  
+  Realiza un commit con un mensaje que describe los cambios realizados.
 
-7. **Añadir cambios al área de preparación**: `git add NOMBRE_DEL_ARCHIVO` `git add .`
-   - Cuando estés listo para guardar los cambios, añade los archivos modificados al área de preparación. Usa git add NOMBRE_DEL_ARCHIVO para añadir un archivo específico o git add . para añadir todos los cambios.
+### Trabajar con Ramas
+- **`git branch`**  
+  Muestra una lista de las ramas existentes en tu repositorio.
 
-9. **Confirmar cambios**: `git commit -m "Mensaje del commit"`
-    - Guarda los cambios en el historial de Git realizando un commit con un mensaje descriptivo usando git commit -m "Mensaje del commit".
+- **`git branch <nombre-de-la-rama>`**  
+  Crea una nueva rama con el nombre especificado.
 
-11. **Enviar cambios al repositorio remoto**: `git push origin NOMBRE_DE_LA_RAMA`
-    - Para subir tus cambios locales al repositorio remoto, utiliza git push origin NOMBRE_DE_LA_RAMA. Este comando envía tus commits al repositorio remoto para que otros puedan verlos.
+- **`git checkout <nombre-de-la-rama>`**  
+  Cambia a la rama especificada.
 
-## Ramas y Fusión
+- **`git merge <nombre-de-la-rama>`**  
+  Fusiona la rama especificada en la rama actual.
 
-Trabajar con ramas te permite gestionar diferentes versiones de tu proyecto de manera eficiente:
+### Sincronización con el Repositorio Remoto
+- **`git pull`**  
+  Descarga y fusiona los cambios del repositorio remoto en tu rama actual.
 
-1. **Crear una nueva rama**: `git branch NOMBRE_DE_LA_RAMA`
-   - Para comenzar a trabajar en una nueva característica o corrección, crea una nueva rama con git branch NOMBRE_DE_LA_RAMA.
+- **`git push`**  
+  Sube tus commits locales al repositorio remoto.
 
-3. **Cambiar a una rama diferente**: `git checkout NOMBRE_DE_LA_RAMA`
-   - Para cambiar a una rama específica, usa git checkout NOMBRE_DE_LA_RAMA.
+### Otros Comandos Útiles
+- **`git log`**  
+  Muestra el historial de commits en la rama actual.
 
-5. **Fusionar una rama**: `git merge NOMBRE_DE_LA_RAMA`
-   - Una vez que hayas terminado de trabajar en una rama y quieras integrar los cambios a la rama principal, utiliza git merge NOMBRE_DE_LA_RAMA para fusionar la rama con la actual.
+- **`git reset <archivo>`**  
+  Deshace los cambios en un archivo específico desde el área de preparación.
 
-## Recuperar Cambios
+- **`git rm <archivo>`**  
+  Elimina un archivo del repositorio y del directorio de trabajo.
 
-Mantén tu repositorio actualizado con los últimos cambios del repositorio remoto:
+## Comandos de Terminal (Bash)
 
-1. **Actualizar el repositorio local**: `git pull`
-   - Para recuperar los cambios realizados por otros y fusionarlos con tu rama actual, usa git pull.
+### Navegación y Gestión de Archivos
+- **`ls`**  
+  Lista los archivos y directorios en el directorio actual.
 
-3. **Ver historial de commits**: `git log`
-   - Revisa el historial de commits y los cambios realizados en el repositorio con git log.
+- **`cd <directorio>`**  
+  Cambia al directorio especificado.
 
----
+- **`mkdir <directorio>`**  
+  Crea un nuevo directorio.
 
-Esta guía proporciona una visión general para comenzar con Git y gestionar tus repositorios de manera eficiente. Puedes personalizarla según las necesidades específicas de tu proyecto.
+- **`rm <archivo>`**  
+  Elimina un archivo.
 
+- **`rmdir <directorio>`**  
+  Elimina un directorio vacío.
 
+- **`cp <origen> <destino>`**  
+  Copia archivos o directorios de origen a destino.
+
+- **`mv <origen> <destino>`**  
+  Mueve archivos o directorios de origen a destino.
+
+### Información del Sistema
+- **`pwd`**  
+  Muestra el directorio de trabajo actual.
+
+- **`top`**  
+  Muestra los procesos en ejecución y su uso de recursos.
+
+- **`df -h`**  
+  Muestra el uso del espacio en disco.
+
+- **`free -h`**  
+  Muestra la memoria libre y usada en el sistema.
+
+## Uso
+
+1. Clona el repositorio:
+    ```bash
+    git clone <url-del-repositorio>
+    ```
+
+2. Navega al directorio del repositorio:
+    ```bash
+    cd <nombre-del-repositorio>
+    ```
+
+3. Usa los comandos según sea necesario.
+
+## Contribuciones
+
+Si tienes sugerencias o mejoras para los comandos listados aquí, siéntete libre de hacer un pull request.
 
 
 
