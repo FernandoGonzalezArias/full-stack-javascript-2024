@@ -150,27 +150,16 @@ Para crear un repositorio Git local y enlazarlo con GitHub, sigue estos pasos:
     git push -u origin main
     ```
 
+## Clonar el Repositorio en tu Máquina Local
 
+1. Abre la terminal o línea de comandos.
+2. Navega al directorio deseado usando `cd /ruta/a/tu/directorio`.
+3. Ejecuta el siguiente comando, reemplazando `URL_DEL_REPOSITORIO` con la URL del repositorio:
 
+   ```bash
+   git clone URL_DEL_REPOSITORIO
+La URL del repositorio se encuentra en la página del repositorio bajo el botón "Code".
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   ```bash
+   cd nombre-del-repositorio
+   ```
