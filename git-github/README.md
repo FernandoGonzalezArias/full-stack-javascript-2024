@@ -1,45 +1,8 @@
-# Guía para Crear un Repositorio en GitHub
-
-## 1. Crear una Cuenta en GitHub
-
-- Regístrate en [GitHub](https://github.com/join) si aún no tienes una cuenta.
-- Inicia sesión en [GitHub](https://github.com/).
-
-## 2. Crear un Nuevo Repositorio
-
-1. Haz clic en el botón **"New"** (Nuevo) en la esquina superior derecha o ve a [https://github.com/new](https://github.com/new).
-
-2. Completa el formulario:
-   - **Repository name (Nombre del repositorio):** Elige un nombre único.
-   - **Description (Descripción):** (Opcional) Añade una breve descripción.
-   - **Public/Private (Público/Privado):** Selecciona la visibilidad del repositorio.
-   - **Initialize this repository with a README (Inicializar este repositorio con un README):** Marca esta opción para incluir un README inicial.
-   - **Add .gitignore (Añadir .gitignore):** (Opcional) Selecciona una plantilla adecuada.
-   - **Choose a license (Elegir una licencia):** (Opcional) Selecciona una licencia para tu proyecto.
-
-3. Haz clic en **"Create repository"**.
-
-## 3. Clonar el Repositorio en tu Máquina Local
-
-1. Abre la terminal o línea de comandos.
-2. Navega al directorio deseado usando `cd /ruta/a/tu/directorio`.
-3. Ejecuta el siguiente comando, reemplazando `URL_DEL_REPOSITORIO` con la URL del repositorio:
-
-   ```bash
-   git clone URL_DEL_REPOSITORIO
-La URL del repositorio se encuentra en la página del repositorio bajo el botón "Code".
-cd nombre-del-repositorio
-
-Ahora puedes comenzar a trabajar en tu proyecto y utilizar Git para gestionar tu repositorio local y sincronizarlo con GitHub.
-
-
-
-
-## 4. Comandos de Consola
+# Comandos de Consola
 
 Este repositorio contiene una colección de comandos de consola útiles para el desarrollo y administración de proyectos. A continuación, se presentan los comandos más comunes y sus descripciones.
 
-### Comandos de Git:
+## Comandos de Git:
 
 #### Configuración
 - **`git config --global user.name "Tu Nombre"`**  
@@ -82,6 +45,16 @@ Este repositorio contiene una colección de comandos de consola útiles para el 
 - **`git merge <nombre-de-la-rama>`**  
   Fusiona la rama especificada en la rama actual.
 
+#### Enlazar Repositorio Local con GitHub
+- **`git remote add origin <url-del-repositorio>`**  
+  Enlaza tu repositorio local con un repositorio remoto en GitHub (reemplaza `<url-del-repositorio>` con la URL del repositorio en GitHub).
+
+- **`git remote -v`**  
+  Muestra las URLs de los repositorios remotos asociados con tu repositorio local.
+
+- **`git remote remove origin`**  
+  Elimina la conexión con el repositorio remoto llamado `origin`.
+
 #### Sincronización con el Repositorio Remoto
 - **`git pull`**  
   Descarga y fusiona los cambios del repositorio remoto en tu rama actual.
@@ -99,7 +72,7 @@ Este repositorio contiene una colección de comandos de consola útiles para el 
 - **`git rm <archivo>`**  
   Elimina un archivo del repositorio y del directorio de trabajo.
 
-### Comandos de Terminal (Bash):
+## Comandos de Terminal (Bash):
 
 #### Navegación y Gestión de Archivos
 - **`ls`**  
@@ -135,6 +108,47 @@ Este repositorio contiene una colección de comandos de consola útiles para el 
 
 - **`free -h`**  
   Muestra la memoria libre y usada en el sistema.
+
+
+
+## Creación de un Repositorio Git y Enlace con GitHub
+
+Para crear un repositorio Git local y enlazarlo con GitHub, sigue estos pasos:
+
+1. Inicializa un nuevo repositorio Git en el directorio actual:
+    ```bash
+    git init
+    ```
+
+2. Añade todos los archivos del directorio al área de preparación:
+    ```bash
+    git add .
+    ```
+
+3. Verifica el estado del repositorio y los archivos preparados:
+    ```bash
+    git status
+    ```
+
+4. Realiza el primer commit con un mensaje descriptivo:
+    ```bash
+    git commit -m "Primer commit"
+    ```
+
+5. Crea o renombra la rama principal:
+    ```bash
+    git branch -M main
+    ```
+
+6. Enlaza el repositorio local con el repositorio remoto en GitHub (reemplaza `<url-del-repositorio>` con la URL del repositorio en GitHub):
+    ```bash
+    git remote add origin <url-del-repositorio>
+    ```
+
+7. Sube tus commits locales al repositorio remoto:
+    ```bash
+    git push -u origin main
+    ```
 
 
 
