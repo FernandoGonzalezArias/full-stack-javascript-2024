@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Definición de un objeto 'coche'
+      const coche = {
+        // Propiedades del objeto
+        marca: "Toyota",
+        modelo: "Corolla",
+        año: 2021,
+        color: "rojo",
+
+        // Método del objeto para mostrar información del coche
+        mostrarInfo: function () {
+          console.log(
+            `Marca: ${this.marca}, Modelo: ${this.modelo}, Año: ${this.año}, Color: ${this.color}`
+          );
+        },
+
+        // Método del objeto para cambiar el color del coche
+        cambiarColor: function (nuevoColor) {
+          this.color = nuevoColor;
+          console.log(`El color del coche ha sido cambiado a ${this.color}`);
+        },
+      };
+
+      // Llamadas a métodos y acceso a propiedades del objeto 'coche'
+
+      // Acceso a propiedades del objeto
+      console.log(coche.marca); // Salida: 'Toyota'
+      console.log(coche.modelo); // Salida: 'Corolla'
+
+      // Llamada al método 'mostrarInfo'
+      coche.mostrarInfo(); // Salida: 'Marca: Toyota, Modelo: Corolla, Año: 2021, Color: rojo'
+
+      // Llamada al método 'cambiarColor'
+      coche.cambiarColor("azul"); // Salida: 'El color del coche ha sido cambiado a azul'
+
+      // Llamada al método 'mostrarInfo' nuevamente para ver el cambio de color
+      coche.mostrarInfo(); // Salida: 'Marca: Toyota, Modelo: Corolla, Año: 2021, Color: azul'
+    </script>
+  </body>
+</html>
