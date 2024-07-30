@@ -7,16 +7,17 @@
   </head>
   <body>
     <script>
-      // Definición de un objeto 'coche'
+      // Definición de un objeto llamado 'coche'
       const coche = {
         // Propiedades del objeto
-        marca: "Toyota",
-        modelo: "Corolla",
-        año: 2021,
-        color: "rojo",
+        marca: "Toyota", // La marca del coche
+        modelo: "Corolla", // El modelo del coche
+        año: 2021, // El año del coche
+        color: "rojo", // El color del coche
 
         // Método del objeto para mostrar información del coche
         mostrarInfo: function () {
+          // 'this' se refiere al objeto actual (en este caso, 'coche')
           console.log(
             `Marca: ${this.marca}, Modelo: ${this.modelo}, Año: ${this.año}, Color: ${this.color}`
           );
@@ -24,6 +25,7 @@
 
         // Método del objeto para cambiar el color del coche
         cambiarColor: function (nuevoColor) {
+          // Cambia la propiedad 'color' del objeto a 'nuevoColor'
           this.color = nuevoColor;
           console.log(`El color del coche ha sido cambiado a ${this.color}`);
         },
@@ -32,17 +34,38 @@
       // Llamadas a métodos y acceso a propiedades del objeto 'coche'
 
       // Acceso a propiedades del objeto
-      console.log(coche.marca); // Salida: 'Toyota'
-      console.log(coche.modelo); // Salida: 'Corolla'
+      console.log(coche.marca); // Salida: 'Toyota' (muestra la marca del coche)
+      console.log(coche.modelo); // Salida: 'Corolla' (muestra el modelo del coche)
 
-      // Llamada al método 'mostrarInfo'
+      // Llamada al método 'mostrarInfo' del objeto 'coche'
       coche.mostrarInfo(); // Salida: 'Marca: Toyota, Modelo: Corolla, Año: 2021, Color: rojo'
 
-      // Llamada al método 'cambiarColor'
+      // Llamada al método 'cambiarColor' del objeto 'coche'
       coche.cambiarColor("azul"); // Salida: 'El color del coche ha sido cambiado a azul'
 
       // Llamada al método 'mostrarInfo' nuevamente para ver el cambio de color
       coche.mostrarInfo(); // Salida: 'Marca: Toyota, Modelo: Corolla, Año: 2021, Color: azul'
+
+      /*
+Resumen:
+1. Definición del objeto 'coche':
+   - Propiedades: 'marca', 'modelo', 'año', 'color'
+   - Métodos: 'mostrarInfo', 'cambiarColor'
+2. Acceso a propiedades:
+   - 'coche.marca' para acceder a la marca del coche
+   - 'coche.modelo' para acceder al modelo del coche
+3. Llamadas a métodos:
+   - 'coche.mostrarInfo()' para mostrar la información completa del coche
+   - 'coche.cambiarColor('azul')' para cambiar el color del coche a azul
+   - 'coche.mostrarInfo()' nuevamente para ver la actualización del color
+*/
+
+      /*
+Conceptos Clave:
+- 'this': En el contexto de un método de objeto, 'this' se refiere al objeto que llamó al método.
+- Propiedades: Son valores asociados a un objeto (ej. 'marca', 'modelo', 'año', 'color').
+- Métodos: Son funciones asociadas a un objeto (ej. 'mostrarInfo', 'cambiarColor').
+*/
     </script>
   </body>
 </html>
