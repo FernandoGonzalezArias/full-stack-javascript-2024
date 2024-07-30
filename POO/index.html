@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POO</title>
+  </head>
+  <body>
+
+    <script>
+      // Definición de una clase base llamada 'Animal'
+      class Animal {
+        // El constructor se llama cuando se crea una instancia de la clase
+        constructor(nombre, edad) {
+          this.nombre = nombre;
+          this.edad = edad;
+        }
+
+        // Método para mostrar información básica del animal
+        mostrarInfo() {
+          console.log(`Nombre: ${this.nombre}, Edad: ${this.edad}`);
+        }
+
+        // Método genérico que puede ser sobrescrito por clases derivadas
+        hacerSonido() {
+          console.log("Este animal hace un sonido.");
+        }
+      }
+
+      // Definición de una clase derivada llamada 'Perro' que hereda de 'Animal'
+      class Perro extends Animal {
+        // El constructor usa 'super' para llamar al constructor de la clase base
+        constructor(nombre, edad, raza) {
+          super(nombre, edad); // Llamada al constructor de 'Animal'
+          this.raza = raza; // Nueva propiedad específica de 'Perro'
+        }
+
+        // Sobrescribir el método 'mostrarInfo' de 'Animal'
+        mostrarInfo() {
+          super.mostrarInfo(); // Llamada al método 'mostrarInfo' de 'Animal'
+          console.log(`Raza: ${this.raza}`); // Información adicional específica de 'Perro'
+        }
+
+        // Sobrescribir el método 'hacerSonido' de 'Animal' para el caso específico de 'Perro'
+        hacerSonido() {
+          console.log("El perro ladra.");
+        }
+      }
+
+      // Definición de otra clase derivada llamada 'Gato' que hereda de 'Animal'
+      class Gato extends Animal {
+        // El constructor usa 'super' para llamar al constructor de la clase base
+        constructor(nombre, edad, color) {
+          super(nombre, edad); // Llamada al constructor de 'Animal'
+          this.color = color; // Nueva propiedad específica de 'Gato'
+        }
+
+        // Sobrescribir el método 'mostrarInfo' de 'Animal'
+        mostrarInfo() {
+          super.mostrarInfo(); // Llamada al método 'mostrarInfo' de 'Animal'
+          console.log(`Color: ${this.color}`); // Información adicional específica de 'Gato'
+        }
+
+        // Sobrescribir el método 'hacerSonido' de 'Animal' para el caso específico de 'Gato'
+        hacerSonido() {
+          console.log("El gato maúlla.");
+        }
+      }
+
+      // Crear instancias de 'Perro' y 'Gato'
+      const miPerro = new Perro("Rex", 5, "Labrador");
+      const miGato = new Gato("Michi", 3, "Blanco");
+
+      // Mostrar información y sonidos de los animales
+      miPerro.mostrarInfo();
+      miPerro.hacerSonido();
+
+      miGato.mostrarInfo();
+      miGato.hacerSonido();
+
+      /*
+Este ejemplo demuestra:
+1. Herencia: Las clases 'Perro' y 'Gato' heredan de 'Animal'.
+2. Polimorfismo: Los métodos 'mostrarInfo' y 'hacerSonido' se comportan de manera diferente dependiendo de la clase del objeto.
+3. Uso de 'super': Para llamar a métodos y constructores de la clase base desde las clases derivadas.
+*/
+
+      /*
+Explicación del código:
+Clase Base (Animal):
+
+Constructor: Inicializa las propiedades nombre y edad.
+Métodos: mostrarInfo muestra la información básica del animal, y hacerSonido es un método genérico que puede ser sobrescrito por clases derivadas.
+Clase Derivada (Perro):
+
+Constructor: Llama al constructor de Animal usando super y añade la propiedad raza.
+Métodos: mostrarInfo y hacerSonido son sobrescritos para incluir la información y comportamiento específicos de un perro.
+Clase Derivada (Gato):
+
+Constructor: Llama al constructor de Animal usando super y añade la propiedad color.
+Métodos: mostrarInfo y hacerSonido son sobrescritos para incluir la información y comportamiento específicos de un gato.
+Instancias:
+
+Se crean instancias de Perro y Gato y se llaman a sus métodos para mostrar cómo funcionan la herencia y el polimorfismo.
+Este ejemplo cubre los conceptos básicos de POO, incluyendo herencia, polimorfismo, y el uso de super para interactuar con la clase base.
+*/
+    </script>
+
+  </body>
+</html>
